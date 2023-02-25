@@ -1,0 +1,53 @@
+{% extends "AppCoder/padre.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block titulo2 %}
+    <h1 class="title-registro">Listado de productos pedidos</h1>
+
+    <table class="table">
+
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Material</th>
+            <th scope="col">Color</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for Prods in object_list %}
+    
+            <tr>
+                <th scope="row">{{Prods.id}}</th>
+                <td>{{Prods.modelo}}</td>
+                <td>{{Prods.material}}</td>
+                <td>{{Prods.color}}</td>
+                <td>
+                    
+                    <button>
+                        <a href="{% url 'Producto Borrar' Prods.id %}">Eliminar Producto</a>
+                    </button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+  
+    
+    
+
+    
+     
+    {% endblock %}
+
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends "AppCoder/padre.html" %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block titulo2 %}
+    <div class="col -lg-4">
+        <form action="/AppCoder/resultados/" method = "GET">
+            <h1 class="title-registro">Busca tu pedido por el nombre :</h1>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text" placeholder="Ingrese el nombre.." name="nombre"  />
+                    <input type="submit" value="Buscar">
+                </div>
+            </div>
+        </form>
+    </div>
+    {% endblock %}   
+</body>
+</html>
+

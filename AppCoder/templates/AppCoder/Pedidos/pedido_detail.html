@@ -1,0 +1,30 @@
+{% extends "AppCoder/padre.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block titulo2 %}
+        
+    
+    <h1 class="title-registro">Detalle del pedido de {{prods.nombre}}</h1>
+
+    
+    <p> Producto: {{prods.modelo}}</p>
+    <p> Material: {{prods.material}}</p>
+    <p> Color: {{prods.color}}</p>
+    <img src="{{prods.imagen.url}}" style="max-width: 500px;"><br/>
+    
+    
+    <a href="{% url 'Buscar Pedido' %}"> Regresar</a>
+    
+    
+       
+    {% endblock %}
+</body>
+</html>

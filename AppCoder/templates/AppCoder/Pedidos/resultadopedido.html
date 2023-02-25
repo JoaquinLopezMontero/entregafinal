@@ -1,0 +1,35 @@
+{% extends "AppCoder/padre.html" %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block titulo2 %}
+    <h1 class="title-registro">Buscaste el pedido de: {{nombre}}</h1>
+    {% for x in resultado %}
+    
+  
+  
+  Pedido Nro: {{x.id}}
+  
+  <a href="{% url 'Pedido Detalle' x.id %}">Ver Detalle</a>
+  
+  <a href="{% url 'Producto Borrar' x.id %}">Eliminar Producto</a><br/>
+
+  
+
+  {% endfor %}  
+  <br/>
+  <a href="{% url 'Buscar Pedido' %}"> Regresar</a>
+     
+    {% endblock %}
+
+    
+</body>
+</html>
